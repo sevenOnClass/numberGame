@@ -60,7 +60,7 @@
 
 - (IBAction)textValueChanged:(id)sender {
   if (self.textField.text.length == 4) {
-    [self.view endEditing:YES];
+//    [self.view endEditing:YES];
     _userStr = @"";
     NSMutableArray *mutableArray = [NSMutableArray array];
     NSInteger num = [self.textField.text integerValue];
@@ -80,6 +80,9 @@
         NSLog(@"%@", self.answer);
 //    NSLog(@"%@", self.currentResult);
     [self showResult];
+      
+    //清空数据
+      self.textField.text = @"";
   }
 }
 
