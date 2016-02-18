@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入四个数字" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="egy-4t-jCy">
+                                <rect key="frame" x="50" y="80" width="150" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.62908541369206228" green="1" blue="0.83230996953877368" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Fe2-RC-a08"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="M1G-AL-OYC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fe2-RC-a08"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="textValueChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="opp-Q2-849"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaI-Xy-e4F">
+                                <rect key="frame" x="260" y="80" width="60" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="zOT-qO-9rY"/>
+                                </constraints>
+                                <state key="normal" title="重新再来"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAn-Sp-y7c"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="猜数字游戏规则：输入四个1-9之间不重复的数字，会提示相应的结果，A表示数字和位置都正确，B表示数字正确但位置不正确，如AAAA表示猜中系统生成的答案，AABB,表示其中两个数字和位置都正确，还有两个数字正确但位置不正确。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OwH-D8-Fdr">
+                                <rect key="frame" x="30" y="155" width="540" height="150"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="4rt-gS-aWj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OwH-D8-Fdr" firstAttribute="top" secondItem="ZaI-Xy-e4F" secondAttribute="bottom" constant="45" id="AX6-7E-Hor"/>
+                            <constraint firstItem="egy-4t-jCy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="CP8-gU-sWm"/>
+                            <constraint firstItem="ZaI-Xy-e4F" firstAttribute="leading" secondItem="egy-4t-jCy" secondAttribute="trailing" constant="60" id="Epx-cE-JaF"/>
+                            <constraint firstAttribute="trailing" secondItem="OwH-D8-Fdr" secondAttribute="trailing" constant="30" id="fo1-T6-TRx"/>
+                            <constraint firstItem="OwH-D8-Fdr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="kwK-1D-sD0"/>
+                            <constraint firstItem="egy-4t-jCy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="l1A-IL-KQF"/>
+                            <constraint firstItem="ZaI-Xy-e4F" firstAttribute="centerY" secondItem="egy-4t-jCy" secondAttribute="centerY" id="ne8-HQ-DQ4"/>
+                            <constraint firstItem="egy-4t-jCy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="zcR-PB-Jvt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="l1A-IL-KQF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="egy-4t-jCy" id="cvp-Nr-bFF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="362"/>
+        </scene>
+    </scenes>
+</document>
